@@ -8,11 +8,11 @@ const Navbar = () => {
         <div className='py-3 sticky z-50 top-0 bg-black'>
             <nav className='flex justify-between container mx-auto'>
                 <div className='flex'>
-                    <Image src={Logo}></Image>
+                    <Image src={Logo} alt='navlogo'></Image>
                     <p className='text-white font-bold text-xl'>FITLOG</p>
                 </div>
                 <div className='flex gap-5 text-white'>
-                    <Link href={''}>Workouts</Link>
+                    <Link href={'/'}>Workouts</Link>
                     <Link href={''}>My Plan</Link>
                 </div>
                 <div className='flex gap-3 text-white'>
