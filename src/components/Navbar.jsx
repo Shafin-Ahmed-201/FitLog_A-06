@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Logo from '../assets/logo.png'
+import PlanCount from './countS&T/PlanCount';
+import SavedCount from './countS&T/SavedCount';
 
 const Navbar = () => {
     return (
@@ -13,16 +15,16 @@ const Navbar = () => {
                 </div>
                 <div className='flex gap-5 text-white'>
                     <Link href={'/'}>Workouts</Link>
-                    <Link href={''}>My Plan</Link>
+                    <Link href={'/myplan'}>My Plan</Link>
                 </div>
                 <div className='flex gap-3 text-white'>
                     <div className='flex gap-1'>
-                        <Link href={''}>Plan</Link>
-                        <p className='bg-[#c2f800] text-black p-0.5 rounded-[40%]'>0</p>
+                        <Link href={'/myplan'}>Plan</Link>
+                       <PlanCount></PlanCount>
                     </div>
                     <div className='flex gap-1'>
-                        <Link href={''}>Saved</Link>
-                        <p className='bg-gray-600 p-0.5 rounded-[40%]'>0</p>
+                        <Link href={'/myplan'}>Saved</Link>
+                        <SavedCount></SavedCount>
                     </div>
                 </div>
             </nav>

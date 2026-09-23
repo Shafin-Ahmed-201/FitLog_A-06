@@ -1,11 +1,12 @@
-import React from "react";
+import SavedButton from "@/app/buttonhandellar/SavedButton";
+import TodayButton from "@/app/buttonhandellar/TodayButton";
 
 const WorkoutDetailsPage = async ({ params }) => {
   const { workId } = await params;
   const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${workId}`);
   const workout = await res.json();
   return (
-    <main className="min-h-screen bg-[#0d0f12] px-4 py-6 text-white md:px-8">
+    <main className="mb-40 bg-[#0d0f12] px-4 py-6 text-white md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-7 md:grid-cols-[0.95fr_1.05fr]">
           <div className="overflow-hidden rounded-lg">
@@ -118,13 +119,9 @@ const WorkoutDetailsPage = async ({ params }) => {
             </div>
 
             <div className="mt-5 flex gap-3">
-              <button className="rounded-md bg-lime-400 px-4 py-2 text-[10px] font-semibold text-black transition hover:bg-lime-300">
-                📅 Add to today&apos;s plan
-              </button>
+             <TodayButton workout={workout}></TodayButton>
 
-              <button className="rounded-md border border-gray-700 px-4 py-2 text-[10px] text-gray-300 transition hover:bg-[#1b1e24]">
-                ♡ Save for later
-              </button>
+              <SavedButton workout={workout}></SavedButton>
             </div>
           </div>
         </div>
