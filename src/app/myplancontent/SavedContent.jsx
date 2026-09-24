@@ -3,11 +3,10 @@ import React, { useContext } from "react";
 import { MyPlanContext } from "../context/MyPlanContext";
 import SavedWorkoutCard from "./SavedWorkoutCard";
 
-const SavedContent = () => {
-  const { saveList } = useContext(MyPlanContext);
+const SavedContent = ({savedSortedWorkouts}) => {
   return (
     <div>
-      {saveList.map((workout) => (
+      {savedSortedWorkouts.map((workout) => (
         <SavedWorkoutCard key={workout.id} workout={workout}></SavedWorkoutCard>
       ))}
     </div>

@@ -3,11 +3,10 @@ import React, { useContext } from "react";
 import { MyPlanContext } from "../context/MyPlanContext";
 import TodayWorkoutCard from "./TodayWorkoutCard";
 
-const TodayPlanContent = () => {
-  const { todayList } = useContext(MyPlanContext);
+const TodayPlanContent = ({todaySortedWorkouts}) => {
   return (
     <div>
-      {todayList.map((workout) => (
+      {todaySortedWorkouts.map((workout) => (
         <TodayWorkoutCard key={workout.id} workout={workout}></TodayWorkoutCard>
       ))}
     </div>
