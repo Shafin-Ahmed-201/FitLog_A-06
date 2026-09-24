@@ -16,7 +16,7 @@ const SavedButton = ({workout}) => {
     }
     return (
         <div>
-           <button onClick={()=>handelSaveButton(workout)} className="rounded-md border border-gray-700 px-4 py-2 text-[10px] text-gray-300 transition hover:bg-[#1b1e24]">
+           <button onClick={()=>handelSaveButton(workout)} className="rounded-md border border-gray-700 cursor-pointer px-4 py-2 text-[10px] text-gray-300 transition hover:bg-[#1b1e24]">
                 ♡ Save for later
               </button> 
         </div>

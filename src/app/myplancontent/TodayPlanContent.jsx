@@ -3,7 +3,24 @@ import React, { useContext } from "react";
 import { MyPlanContext } from "../context/MyPlanContext";
 import TodayWorkoutCard from "./TodayWorkoutCard";
 
-const TodayPlanContent = ({todaySortedWorkouts}) => {
+const TodayPlanContent = () => {
+ const { todayList,sortBy} = useContext(MyPlanContext);
+
+   const todaySortedWorkouts = [...todayList].sort((a, b) => {
+    if (sortBy === "duration") {
+      return b.duration - a.duration;
+    }
+
+    if (sortBy === "calories") {
+      return b.caloriesBurned - a.caloriesBurned;
+    }
+
+    if (sortBy === "rating") {
+      return b.rating - a.rating;
+    }
+
+    return 0;
+  });
   return (
     <div>
       {todaySortedWorkouts.map((workout) => (

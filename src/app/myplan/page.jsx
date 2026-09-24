@@ -9,48 +9,17 @@ import Minutes from "@/components/myplancount/Minutes";
 import Calories from "@/components/myplancount/Calories";
 
 const MyPlanPage = () => {
-  const { todayList, saveList, activeTab, setActiveTab, sortBy, setSortBy } =
-    useContext(MyPlanContext);
-  // Today's Plan Sort
-  const todaySortedWorkouts = [...todayList].sort((a, b) => {
-    if (sortBy === "duration") {
-      return b.duration - a.duration;
-    }
-
-    if (sortBy === "calories") {
-      return b.caloriesBurned - a.caloriesBurned;
-    }
-
-    if (sortBy === "rating") {
-      return b.rating - a.rating;
-    }
-
-    return 0;
-  });
-  // Saved Plan Sort
-  const savedSortedWorkouts = [...saveList].sort((a, b) => {
-    if (sortBy === "duration") {
-      return b.duration - a.duration;
-    }
-
-    if (sortBy === "calories") {
-      return b.caloriesBurned - a.caloriesBurned;
-    }
-
-    if (sortBy === "rating") {
-      return b.rating - a.rating;
-    }
-
-    return 0;
-  });
+  const { saveList, todayList, activeTab, setActiveTab, sortBy, setSortBy } = useContext(MyPlanContext);
 
   return (
     <div className="container mx-auto">
       <div className="mt-5">
+        <div className="text-center lg:text-left">
         <h2 className="text-2xl font-bold">MY PLAN</h2>
         <p className="text-gray-400">
           Cap of five lifts for today. Finish them, then load more.
         </p>
+        </div>
         <div className="bg-gray-900/50 mt-5 p-7 rounded-2xl">
           <div className="flex justify-around">
             <div>
@@ -100,9 +69,7 @@ const MyPlanPage = () => {
             {todayList.length <= 0 ? (
               <NothingHere></NothingHere>
             ) : (
-              <TodayPlanContent
-                todaySortedWorkouts={todaySortedWorkouts}
-              ></TodayPlanContent>
+              <TodayPlanContent></TodayPlanContent>
             )}
           </div>
 
@@ -118,9 +85,7 @@ const MyPlanPage = () => {
             {saveList.length <= 0 ? (
               <NothingHere></NothingHere>
             ) : (
-              <SavedContent
-                savedSortedWorkouts={savedSortedWorkouts}
-              ></SavedContent>
+              <SavedContent></SavedContent>
             )}
           </div>
         </div>

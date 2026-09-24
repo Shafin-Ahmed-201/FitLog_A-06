@@ -23,7 +23,7 @@ transition: Bounce,
     return (
         <div>
              <button onClick={()=>handelRemoveButton(workout)}
-          className="
+          className=" cursor-pointer
             ml-1
             text-xl
             text-gray-500

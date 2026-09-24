@@ -20,11 +20,11 @@ const MarkAsDoneButton = ({ workout }) => {
   return (
     <button
       onClick={handleAsDone}
-      className="flex items-center gap-2 rounded-full bg-lime-400 px-5 py-2 text-xs font-semibold text-black transition hover:bg-lime-300"
+      className="flex items-center cursor-pointer gap-2 rounded-full bg-lime-400 px-5 py-2 text-xs font-semibold text-black transition hover:bg-lime-300"
     >
       <span>✓</span>
 
-      {isDone ? "Done" : "Mark as Done"}
+      {isDone ? "Workout Done" : "Mark as Done"}
     </button>
   );
 };

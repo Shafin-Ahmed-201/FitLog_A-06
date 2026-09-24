@@ -11,7 +11,7 @@ const Library = async() => {
         <div className='container mx-auto grid justify-center mt-5'>
             <h2 className='text-2xl font-bold text-white'>THE LIBRARY</h2>
             <p className='text-gray-400'>Twelve lifts covering every major muscle group.</p>
-            <div className='grid grid-cols-3 gap-15 py-5'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 py-5'>
               {
                 workouts.map((workout)=><WorkoutCard key={workout.id} workout={workout}></WorkoutCard>)
               }

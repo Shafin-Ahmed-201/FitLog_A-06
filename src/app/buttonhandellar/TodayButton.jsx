@@ -16,7 +16,7 @@ const TodayButton = ({workout}) => {
        }
     return (
         <div>
-             <button onClick={()=>handelTodayButton(workout)} className="rounded-md bg-lime-400 px-4 py-2 text-[10px] font-semibold text-black transition hover:bg-lime-300">
+             <button disabled={todayList.length===5} onClick={()=>handelTodayButton(workout)} className="disabled:cursor-not-allowed rounded-md bg-lime-400 px-4 py-2 text-[10px] cursor-pointer font-semibold text-black transition hover:bg-lime-300">
                 📅 Add to today&apos;s plan
               </button>
         </div>

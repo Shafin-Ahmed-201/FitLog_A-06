@@ -43,9 +43,9 @@ const TodayWorkoutCard = ({ workout }) => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link href={`/workouts/${workout.id}`}>
+          <Link href={`/details/${workout.id}`}>
             <button
-              className="
+              className=" cursor-pointer
             rounded-full
             border border-[#39404c]
             px-5 py-2
