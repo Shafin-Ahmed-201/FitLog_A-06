@@ -1,3 +1,39 @@
+#  FitLog
+
+FitLog is a modern workout tracking web application that helps users explore workouts, create a daily workout plan, save exercises, and track completed workouts.
+
+##  Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- Context API
+- REST API
+- LocalStorage
+
+##  Key Features
+
+### 1.  Workout Library
+Browse different workouts with information such as muscle groups, equipment, difficulty, duration, calories, and rating.
+
+### 2.  Workout Search
+Search for workouts by their name and quickly find the exercise you need.
+
+### 3.  My Plan
+Add workouts to your daily plan and manage your selected exercises.
+
+### 4.  Track Completed Workouts
+Mark workouts as completed after finishing them and keep track of your progress.
+
+### 5.  Save Workouts
+Save your favorite workouts for later and easily access them from the Saved section.
+
+##  Project Goal
+
+The goal of FitLog is to provide a simple and user-friendly platform for discovering workouts and managing a personal daily workout routine.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
