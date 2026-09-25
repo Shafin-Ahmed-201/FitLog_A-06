@@ -7,6 +7,8 @@ const MyPlanProvider = ({children}) => {
     const [asDone,setAsDone]=useState([])
     const [activeTab, setActiveTab] = useState("today")
     const [sortBy, setSortBy] = useState("duration")
+    const [search, setSearch] = useState("");
+    const [filterWarkouts, setFilterWorkouts] = useState([]);
     const shareData={
        todayList,
        setTodayList,
@@ -17,7 +19,9 @@ const MyPlanProvider = ({children}) => {
        activeTab,
        setActiveTab,
        sortBy,
-       setSortBy 
+       setSortBy,
+       search,
+       setSearch
     }
     return (
         <MyPlanContext.Provider value={shareData}>{children}</MyPlanContext.Provider>

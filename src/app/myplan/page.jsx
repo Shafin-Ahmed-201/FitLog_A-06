@@ -24,7 +24,7 @@ const MyPlanPage = () => {
           <div className="flex justify-around">
             <div>
               <p className="text-gray-400">Exercises</p>
-              <h3 className="text-4xl font-bold">
+              <h3 className="text-4xl font-bold text-[#c2f800]">
                 <Exercises></Exercises>
               </h3>
             </div>

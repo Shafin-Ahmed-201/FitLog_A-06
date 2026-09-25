@@ -1,10 +1,10 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState} from "react";
 import { MyPlanContext } from "../context/MyPlanContext";
 import TodayWorkoutCard from "./TodayWorkoutCard";
 
 const TodayPlanContent = () => {
- const { todayList,sortBy} = useContext(MyPlanContext);
+ const { todayList,setTodayList,sortBy} = useContext(MyPlanContext);
 
    const todaySortedWorkouts = [...todayList].sort((a, b) => {
     if (sortBy === "duration") {
