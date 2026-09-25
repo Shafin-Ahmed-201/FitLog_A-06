@@ -6,11 +6,10 @@ FitLog is a modern workout tracking web application that helps users explore wor
 
 - Next.js
 - React
-- TypeScript
 - Tailwind CSS
 - DaisyUI
 - Context API
-- REST API
+- React Toastify
 - LocalStorage
 
 ##  Key Features
