@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
     <Banner></Banner>
+    <section id="library">
     <Library></Library>
+    </section>
     </>
   );
 }
