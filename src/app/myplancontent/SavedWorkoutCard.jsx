@@ -5,7 +5,7 @@ import SavedRemoveButton from "../buttonhandellar/SavedRemoveButton";
 const SavedWorkoutCard = ({ workout }) => {
   return (
     <div>
-      <div className="flex w-full items-center justify-between rounded-2xl border border-[#292e38] bg-[#15181e] p-4">
+      <div className="flex w-full items-center justify-center md:justify-between rounded-2xl border border-[#292e38] bg-[#15181e] p-4">
         <div className="flex items-center gap-4">
           <div className="h-20 w-36 shrink-0 overflow-hidden rounded-xl">
             <img

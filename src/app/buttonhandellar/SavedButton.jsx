@@ -11,7 +11,7 @@ const SavedButton = ({workout}) => {
         }
         else{
             setSaveList([...saveList,workout])
-             toast.success(`${workout.name} added to Today's Plan`)
+             toast.success(`${workout.name} added to Saved`)
         }
     }
     return (
