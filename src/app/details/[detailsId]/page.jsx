@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 const WorkoutDetailsPage = async ({ params }) => {
@@ -6,6 +7,9 @@ const WorkoutDetailsPage = async ({ params }) => {
   const workout = await res.json();
   return (
     <main className="mb-40 bg-[#0d0f12] px-4 py-6 text-white md:px-8">
+      <div className="mb-4">
+      <Link href={'/myplan'} className="bg-lime-400 text-black py-1 px-4 rounded-xl">Back</Link>
+      </div>
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-7 md:grid-cols-[0.95fr_1.05fr]">
           <div className="overflow-hidden rounded-lg">

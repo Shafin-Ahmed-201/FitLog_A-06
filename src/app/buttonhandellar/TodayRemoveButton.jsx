@@ -4,10 +4,14 @@ import { MyPlanContext } from "../context/MyPlanContext";
 import { Bounce, toast } from "react-toastify";
 
 const TodayRemoveButton = ({ workout }) => {
-  const { todayList, setTodayList } = useContext(MyPlanContext);
+  const { todayList, setTodayList,setAsDone } = useContext(MyPlanContext);
   const handelRemoveButton = (workout) => {
     const newtoday = todayList.filter((w) => w.id !== workout.id);
     setTodayList(newtoday);
+
+    const newTodayId = todayList.filter((w) => w.id !== workout.id);
+    setAsDone(newTodayId);
+    
     toast.info(`${workout.name} removed from Today's Plan`, {
       position: "bottom-right",
       autoClose: 5000,

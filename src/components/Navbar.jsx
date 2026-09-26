@@ -61,8 +61,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:flex">
-          <Image src={Logo} alt="navlogo"></Image>
+        <div className="flex items-center">
+          <Image
+            src={Logo}
+            alt="Fitlog logo"
+            width={40}
+            height={40}
+            className="w-7 h-7 object-contain"
+          />
           <Link href={"/"}>
             <p className="text-white font-bold text-xl ">FITLOG</p>
           </Link>
