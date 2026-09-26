@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 const TodayButton = ({workout}) => {
      const { todayList, setTodayList}=useContext(MyPlanContext)
        const handelTodayButton=(workout)=>{
-          if(todayList.includes(workout)){
-             toast.error(`${workout.name} already added to Today's Plan`)
+          if(todayList.find((w)=>w.id===workout.id)){
+             return toast.error(`${workout.name} already added to Today's Plan`)
           } 
           else{
             setTodayList([...todayList,workout])

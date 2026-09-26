@@ -6,8 +6,8 @@ import { toast } from 'react-toastify';
 const SavedButton = ({workout}) => {
     const {saveList,setSaveList }=useContext(MyPlanContext)
     const handelSaveButton=(workout)=>{
-        if(saveList.includes(workout)){
-            toast.error(`${workout.name} already added to Saved`)
+        if(saveList.find((w)=>w.id===workout.id)){
+            return toast.error(`${workout.name} already added to Saved`)
         }
         else{
             setSaveList([...saveList,workout])
