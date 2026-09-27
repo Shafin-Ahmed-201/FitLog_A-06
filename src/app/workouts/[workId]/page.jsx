@@ -1,10 +1,14 @@
 import SavedButton from "@/app/buttonhandellar/SavedButton";
 import TodayButton from "@/app/buttonhandellar/TodayButton";
+import DataFetchError from "@/components/DataFetchError";
 import Link from "next/link";
 
 const WorkoutDetailsPage = async ({ params }) => {
   const { workId } = await params;
   const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${workId}`);
+  if(!res.ok){
+        return <DataFetchError></DataFetchError>
+    }
   const workout = await res.json();
   return (
     <main className="mb-40 bg-[#0d0f12] px-4 py-6 text-white md:px-8">

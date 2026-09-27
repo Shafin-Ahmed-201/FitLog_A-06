@@ -1,8 +1,12 @@
 
+import DataFetchError from '../DataFetchError';
 import Search from './Search';
 import WorkoutList from './WorkoutList';
 const getData=async()=>{
     const res=await fetch('https://api.api-store.workers.dev/api/fitlog')
+    if(!res.ok){
+        return <DataFetchError></DataFetchError>
+    }
     const data=await res.json()
     return data
 }

@@ -1,9 +1,13 @@
+import DataFetchError from "@/components/DataFetchError";
 import Link from "next/link";
 
 
 const WorkoutDetailsPage = async ({ params }) => {
   const { detailsId } = await params;
   const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${detailsId}`);
+  if(!res.ok){
+        return <DataFetchError></DataFetchError>
+    }
   const workout = await res.json();
   return (
     <main className="mb-40 bg-[#0d0f12] px-4 py-6 text-white md:px-8">
